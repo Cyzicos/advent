@@ -1,5 +1,6 @@
 import collections
 import itertools
+import numpy as np
 
 from advent import io_utils
 
@@ -30,3 +31,23 @@ def stage_part1():
     ids = io_utils.load_txt(path)
     twos, threes = do_all(ids)
     return twos*threes
+
+
+def stage_part2():
+    path = '/home/hannes/repos/advent/advent/day2/input.txt'
+    ids = io_utils.load_txt(path)
+    return iter_part2(ids)
+
+
+def iter_part2(ids):
+    cartit = itertools.product(ids, ids)
+    for it in cartit:
+        d = diff(*it)
+        if sum(d) == 1:
+            index = np.where(d == 1)[0][0]
+            print(index)
+            return it[0][:index]+it[0][index+1:]
+
+
+def diff(a, b):
+    return np.invert(np.array([*a]) == np.array([*b]))

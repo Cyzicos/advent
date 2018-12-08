@@ -38,3 +38,23 @@ def test_do_all():
     twos, threes = day2_utils.do_all(ids)
     assert twos == 2
     assert threes == 1
+
+
+def test_diff():
+    a = 'abcde'
+    b = 'abcbe'
+    assert sum(day2_utils.diff(a, b)) == 1
+
+    a = 'abcde'
+    b = 'abcxy'
+    assert sum(day2_utils.diff(a, b)) == 2
+
+    a = 'abc'
+    b = 'abc'
+    assert sum(day2_utils.diff(a, b)) == 0
+
+
+def test_iter_part2():
+    ids = ['abcxy', 'abcde', 'abcbe']
+    out = day2_utils.iter_part2(ids)
+    assert out == 'abce'
