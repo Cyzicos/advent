@@ -1,13 +1,5 @@
 # -*- coding: utf-8 -*-
-from day1 import day1_utils
-
-
-def test_foo():
-    assert 1 == 1
-
-
-def test_foo2():
-    assert 1 == 1
+from advent.day1 import day1_utils
 
 
 def test_load():
@@ -26,3 +18,14 @@ def test_to_int_edge():
 
 def test_part1():
     assert day1_utils.calc_part1([1, 2, 3]) == 6
+
+
+def test_part2():
+    assert day1_utils.calc_part2([1, 2, 3]) == 0
+    assert day1_utils.calc_part2([1, 2, 3, -5]) == 1
+    assert day1_utils.calc_part2([1, -1]) == 0
+
+
+def test_set_iterator():
+    assert day1_utils.set_iterator([1, 2, 3]) == 0
+    assert day1_utils.set_iterator([1, 3, 1, -5]) == 1
