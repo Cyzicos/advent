@@ -4,13 +4,13 @@ from advent import io_utils
 
 
 def stage_part1():
-    path = '/home/hannes/repos/advent/day1/input.txt'
+    path = '/home/hannes/repos/advent/advent/day1/input.txt'
     numbers = load_input(path)
     print(calc_part1(numbers))
 
 
 def stage_part2():
-    path = '/home/hannes/repos/advent/day1/input.txt'
+    path = '/home/hannes/repos/advent/advent/day1/input.txt'
     numbers = load_input(path)
     print(calc_part2(numbers))
 
