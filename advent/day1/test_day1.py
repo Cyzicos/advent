@@ -2,11 +2,6 @@
 from advent.day1 import day1_utils
 
 
-def test_load():
-    path = 'input.txt'
-    assert day1_utils.load_input(path)[0] == 19
-
-
 def test_to_int():
     assert isinstance(day1_utils.to_int('+19'), int)
 
