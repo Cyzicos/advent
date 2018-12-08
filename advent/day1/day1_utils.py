@@ -42,7 +42,6 @@ def load_input(path):
 
 
 def clean_input(_input):
-    _input = [i.strip() for i in _input]
     _input = [to_int(i) for i in _input]
     return _input
 
