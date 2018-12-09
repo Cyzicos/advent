@@ -2,7 +2,7 @@ import collections
 import itertools
 import numpy as np
 
-from advent import io_utils
+from advent import utils
 
 
 def is_no_letters(_id):
@@ -28,14 +28,14 @@ def tuple_adder(total, elem):
 
 def stage_part1():
     path = '/home/hannes/repos/advent/advent/day2/input.txt'
-    ids = io_utils.load_txt(path)
+    ids = utils.load_txt(path)
     twos, threes = do_all(ids)
     return twos*threes
 
 
 def stage_part2():
     path = '/home/hannes/repos/advent/advent/day2/input.txt'
-    ids = io_utils.load_txt(path)
+    ids = utils.load_txt(path)
     return iter_part2(ids)
 
 

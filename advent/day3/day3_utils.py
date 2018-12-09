@@ -1,7 +1,7 @@
 import numpy as np
 import time
 
-from advent import io_utils
+from advent import utils
 
 
 def claim_to_dict(claim):
@@ -16,7 +16,7 @@ def claim_to_dict(claim):
     return {'id': _id, 'cords': tuple(cords), 'sizes': tuple(sizes)}
 
 
-claims = io_utils.load_txt('/home/hannes/repos/advent/advent/day3/input.txt')
+claims = utils.load_txt('/home/hannes/repos/advent/advent/day3/input.txt')
 claims = [claim_to_dict(claim) for claim in claims]
 
 
@@ -53,7 +53,7 @@ def calc_part1(fabric):
     return sum(counts[2:])
 
 
-@io_utils.timeit
+@utils.timeit
 def calc_part2(claims):
     fabric = init_fabric(1000)
     fabric = add_claims_to_fabric(claims, fabric)

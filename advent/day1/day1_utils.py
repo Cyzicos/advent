@@ -1,6 +1,6 @@
 import itertools
 
-from advent import io_utils
+from advent import utils
 
 
 def stage_part1():
@@ -37,7 +37,7 @@ def set_iterator(it):
 
 
 def load_input(path):
-    loaded = io_utils.load_txt(path)
+    loaded = utils.load_txt(path)
     return clean_input(loaded)
 
 
